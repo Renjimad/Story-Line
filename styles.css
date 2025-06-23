@@ -147,43 +147,18 @@ body {
     }
 
     .nav-links, .nav-buttons {
-        position: absolute;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.95);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        z-index: 2001;
+        display: none !important;
     }
-    .nav-links {
-        top: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 1.5rem 1rem 0.5rem 1rem;
-        margin-bottom: 2.5rem;
+    .mobile-menu-toggle {
+        display: flex !important;
     }
-    .nav-buttons {
-        top: calc(100% + 160px);
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 0 1rem 1.5rem 1rem;
+}
+@media (min-width: 769px) {
+    .nav-links, .nav-buttons {
+        display: flex !important;
     }
-
-    .nav-links.active, .nav-buttons.active {
-        display: flex;
-    }
-
-    .nav-toggle.active span:first-child {
-        transform: rotate(45deg) translate(8px, 6px);
-    }
-
-    .nav-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle.active span:last-child {
-        transform: rotate(-45deg) translate(7px, -5px);
+    .mobile-menu-toggle {
+        display: none !important;
     }
 }
 
