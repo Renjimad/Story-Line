@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyline - AI Comic Story Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Storyline</a>
+            <div class="nav-links">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="#" class="login-btn">Log in</a>
+                <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+            <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="mobileMenuClose" class="mobile-menu-close" aria-label="Close menu">&times;</button>
+        <a href="#how-it-works" class="mobile-menu-link">How It Works</a>
+        <a href="#benefits" class="mobile-menu-link">Benefits</a>
+        <a href="#pricing" class="mobile-menu-link">Pricing</a>
+        <div class="mobile-menu-actions">
+            <a href="#" class="login-btn">Log in</a>
+            <a href="#" class="signup-btn">Sign Up</a>
+        </div>
+    </div>
+      
+      
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text-content">
+                    <h1>Transform Your Words<br>Into Comic Adventures!</h1>
+                    <p class="hero-text">Instantly turn your ideas into comic stories — no drawing skills, just your words and AI magic.</p>
+                    <button class="cta-button">Try Storyline Free</button>
+                </div>
+                <div class="hero-visual">
+                    <div class="comic-preview">
+                        <div class="comic-panel">
+                            <img src="2.png" alt="AI Generated Comic Preview">
+                        </div>
+                        <div class="speech-bubble prompt">
+                            <p>"A brave astronaut discovers a mysterious glowing crystal on Mars..."</p>
+                            <div class="prompt-label">Your Prompt</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="howit-subtitle" style="text-align:center; color:#888; font-size:1.2rem; margin-bottom:1.5rem;">Turn your ideas into comics in 3 easy steps.</div>
+            <div class="steps">
+                <div class="step step-1" data-aos="fade-up">
+                    <div class="step-icon">✍️</div>
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Write Your Prompt</h3>
+                        <p class="step-description">"It was a rainy night in Neo-Mumbai..."</p>
+                        <p class="step-subtext">Got a spark? Type anything — a scene, a mood, even a random line.<br>💡 No rules. Just imagination.</p>
+                    </div>
+                </div>
+                <div class="step step-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-icon">🤖</div>
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI Spins the Plot</h3>
+                        <p class="step-description">⚙️ Our AI crafts an epic narrative</p>
+                        <p class="step-subtext">In seconds, the AI weaves a plot from your spark.<br>📖 Think "To be continued…" but instantly.</p>
+                    </div>
+                </div>
+                <div class="step step-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-icon">🎨</div>
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Boom! Comic Panels</h3>
+                        <p class="step-description">🖼️ Your story becomes a comic strip — instantly</p>
+                        <p class="step-subtext">Snap — your story turns into a comic strip.<br>✨ It feels like magic (but it's really smart tech).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="howit-cta" style="text-align:center; margin-top:2.5rem;" data-aos="fade-up">
+                <a href="#" class="cta-button" style="font-size:1.1rem; padding:0.9rem 2.2rem;">Try it now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Example Comic Section -->
+    <section id="example" class="example">
+        <div class="container">
+            <h2>See It In Action</h2>
+            <div class="transformation-grid">
+                <!-- Transformation 1: No Color → Color -->
+                <div class="transform-panel">
+                    <h3>Basic Glow-Up</h3>
+                    <p class="transform-description">From concept to finish with no effort</p>
+                    <div class="before-after-container">
+                        <div class="panel before">
+                            <div class="panel-label">Before</div>
+                            <img src="5.jpg" alt="Raw sketch concept">
+                        </div>
+                        <div class="arrow-icon">→</div>
+                        <div class="panel after">
+                            <div class="panel-label">After</div>
+                            <img src="8.png" alt="Fully colored final art">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transformation 2: Basic Detail → Enhanced Detail -->
+                <div class="transform-panel">
+                    <h3>Enhanced Detail</h3>
+                    <p class="transform-description">AI enhances your art like a pro artist would</p>
+                    <div class="before-after-container">
+                        <div class="panel before">
+                            <div class="panel-label">Before</div>
+                            <img src="6.webp" alt="Basic detail artwork">
+                        </div>
+                        <div class="arrow-icon">→</div>
+                        <div class="panel after">
+                            <div class="panel-label">After</div>
+                            <img src="9.png" alt="Enhanced detail artwork">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transformation 3: Inconsistent → Consistent Style -->
+                <div class="transform-panel">
+                    <h3>Style Unification</h3>
+                    <p class="transform-description">AI makes a cohesive comic even from messy inputs</p>
+                    <div class="before-after-container">
+                        <div class="panel before">
+                            <div class="panel-label">Before</div>
+                            <img src="7.webp" alt="Inconsistent style artwork">
+                        </div>
+                        <div class="arrow-icon">→</div>
+                        <div class="panel after">
+                            <div class="panel-label">After</div>
+                            <img src="10.png" alt="Consistent style artwork">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2>Why Storyline?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <h3>Fun</h3>
+                    <p>Turn your imagination into vibrant comic stories within seconds</p>
+                </div>
+                <div class="benefit">
+                    <h3>Fast</h3>
+                    <p>Generate complete comic panels in less than a minute</p>
+                </div>
+                <div class="benefit">
+                    <h3>Creative</h3>
+                    <p>Unlimited possibilities with AI-powered storytelling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            
+            <!-- Billing Toggle -->
+            <div class="billing-toggle">
+                <span class="toggle-option billing-option selected" data-billing="monthly">Monthly</span>
+                <span class="toggle-option billing-option" data-billing="yearly">Yearly <span class="discount-badge">Save 20%</span></span>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <div class="card-tag">Starter</div>
+                        <p class="plan-subtitle">Perfect for trying out Storyline</p>
+                        <div class="price">
+                            <div class="price-monthly">
+                                <span class="currency">$</span>
+                                <span class="amount">0</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <div class="price-yearly">
+                                <span class="currency">$</span>
+                                <span class="amount">0</span>
+                                <span class="period">/year</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="features-list">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Write comics faster with AI assistance
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Get 3 illustrated scenes per story
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Access to basic story templates
+                        </li>
+                        <li>
+                            <span class="cross-icon">✕</span>
+                            No advanced art styles
+                        </li>
+                        <li>
+                            <span class="cross-icon">✕</span>
+                            No commercial use allowed
+                        </li>
+                    </ul>
+                    <button class="pricing-btn">Start Free</button>
+                    <div class="card-footer">
+                        <p class="trust-trigger">No credit card required</p>
+                    </div>
+                </div>
+
+                <!-- Studio Plan (Moved to center) -->
+                <div class="pricing-card legend">
+                    <div class="card-header">
+                        <div class="card-tag">Studio</div>
+                        <p class="plan-subtitle">For professional creators & teams</p>
+                        <div class="price">
+                            <div class="price-monthly">
+                                <span class="currency">$</span>
+                                <span class="amount">49</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <div class="price-yearly">
+                                <span class="currency">$</span>
+                                <span class="amount">470</span>
+                                <span class="period">/year</span>
+                                <div class="yearly-save">Save 20%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="features-list">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Unlimited AI-powered comic creation
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Custom art style transfer
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Brand kit & team collaboration
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Priority support with live chat
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Full commercial rights + resale
+                        </li>
+                    </ul>
+                    <button class="pricing-btn">Get Studio</button>
+                    <div class="card-footer">
+                        <p class="trust-trigger">14-day money-back guarantee</p>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card featured">
+                    <div class="card-header">
+                        <div class="card-tag">Pro</div>
+                        <p class="plan-subtitle">For individual creators</p>
+                        <div class="price">
+                            <div class="price-monthly">
+                                <span class="currency">$</span>
+                                <span class="amount">29</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <div class="price-yearly">
+                                <span class="currency">$</span>
+                                <span class="amount">276</span>
+                                <span class="period">/year</span>
+                                <div class="yearly-save">Save 20%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="features-list">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Create up to 15 scenes per story
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Advanced AI writing assistance
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            All story templates included
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            HD quality exports
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Commercial use license
+                        </li>
+                    </ul>
+                    <button class="pricing-btn">Get Pro</button>
+                    <div class="card-footer">
+                        <p class="trust-trigger">Cancel anytime</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-footer">
+                <div class="trust-badges">
+                    <span class="badge">⭐️ Top Creator Tool 2024</span>
+                    <span class="badge">🛡️ Secure Payment</span>
+                    <span class="badge">❤️ Trusted by 5,000+ creators</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Users Say</h2>
+            <div class="testimonials-container">
+                <button class="testimonial-nav prev" aria-label="Previous testimonial">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                
+                <div class="testimonials-track">
+                    <div class="testimonial active" data-aos="fade-up">
+                        <div class="speech-bubble">
+                            <p>"Storyline turns my daydreams into graphic novels. It's like having an artist in your pocket!"</p>
+                            <div class="bubble-tail"></div>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-avatar">
+                                <img src="11.png" alt="Sarah K." onerror="this.src='data:image/svg+xml;charset=UTF-8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 40 40\'><rect width=\'40\' height=\'40\' rx=\'20\' fill=\'%234CAF50\'/><text x=\'50%\' y=\'50%\' font-size=\'20\' fill=\'white\' text-anchor=\'middle\' dy=\'.3em\'>S</text></svg>'">
+                            </div>
+                            <div class="author-details">
+                                <div class="author-name">Sarah K. <span class="author-icon">✍️</span></div>
+                                <div class="author-title">Writer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                        <div class="speech-bubble">
+                            <p>"I describe a scene, and boom — it's a comic! This tool gets me like no other."</p>
+                            <div class="bubble-tail"></div>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-avatar">
+                                <img src="12.jpeg" alt="Mike R." onerror="this.src='data:image/svg+xml;charset=UTF-8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 40 40\'><rect width=\'40\' height=\'40\' rx=\'20\' fill=\'%233498db\'/><text x=\'50%\' y=\'50%\' font-size=\'20\' fill=\'white\' text-anchor=\'middle\' dy=\'.3em\'>M</text></svg>'">
+                            </div>
+                            <div class="author-details">
+                                <div class="author-name">Mike R. <span class="author-icon">📚</span></div>
+                                <div class="author-title">Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                        <div class="speech-bubble">
+                            <p>"From script to panels in seconds. My students are obsessed with creating their own comics now!"</p>
+                            <div class="bubble-tail"></div>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-avatar">
+                                <img src="13.png" alt="Alex P." onerror="this.src='data:image/svg+xml;charset=UTF-8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 40 40\'><rect width=\'40\' height=\'40\' rx=\'20\' fill=\'%23e74c3c\'/><text x=\'50%\' y=\'50%\' font-size=\'20\' fill=\'white\' text-anchor=\'middle\' dy=\'.3em\'>A</text></svg>'">
+                            </div>
+                            <div class="author-details">
+                                <div class="author-name">Alex P. <span class="author-icon">🎨</span></div>
+                                <div class="author-title">Art Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="testimonial-nav next" aria-label="Next testimonial">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="testimonial-dots">
+                <button class="dot active" aria-label="Testimonial 1"></button>
+                <button class="dot" aria-label="Testimonial 2"></button>
+                <button class="dot" aria-label="Testimonial 3"></button>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-credit">Made by Abhishek</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html> 
